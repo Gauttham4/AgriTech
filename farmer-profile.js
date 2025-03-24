@@ -191,7 +191,7 @@ document.addEventListener('DOMContentLoaded', function() {
                     goBackButton.style.cursor = 'pointer';
                     
                     goBackButton.addEventListener('click', function() {
-                        window.location.href = 'wt.html';
+                        window.location.href = 'index.html';
                     });
                     
                     verificationBox.appendChild(goBackButton);
@@ -1248,7 +1248,7 @@ function editProduct(productId) {
                 sessionStorage.removeItem('currentUserId');
                 
                 // Redirect to home page
-                window.location.href = 'wt.html';
+                window.location.href = 'index.html';
             });
         }
     }

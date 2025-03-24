@@ -123,7 +123,7 @@ document.addEventListener('DOMContentLoaded', function() {
                 
                 // Redirect to home page after 1.5 seconds
                 setTimeout(() => {
-                    window.location.href = userType === 'customer' ? 'wt.html.html' : 'wt.html';
+                    window.location.href = userType === 'customer' ? 'index.html.html' : 'index.html';
                 }, 1500);
             } else {
                 // Failed login

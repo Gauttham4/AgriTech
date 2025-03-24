@@ -436,7 +436,7 @@ document.addEventListener('DOMContentLoaded', function() {
             
             // Redirect to home page after a short delay
             setTimeout(() => {
-                window.location.href = 'wt.html';
+                window.location.href = 'index.html';
             }, 1500);
         });
     }
