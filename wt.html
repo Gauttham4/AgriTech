@@ -1,0 +1,596 @@
+    <!DOCTYPE html>
+    <html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <meta name="viewport" content="width=device-width, initial-scale=1.0">
+        <title>AgriConnect - Direct From Farmers</title>
+        <link rel="stylesheet" href="style.css">
+        <!-- <link rel="stylesheet" href="farmer-profile.css"> -->
+
+        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+        <link rel="preconnect" href="https://fonts.googleapis.com">
+        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+        <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    </head>
+    <body>
+        <!-- Preloader -->
+        <div class="preloader">
+            <div class="spinner"></div>
+        </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="wt.html">
+                    <i class="fas fa-leaf"></i> AgriGrow
+                </a>            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="#" class="active">Home</a></li>
+                <li><a href="service.html">Services</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="farmer.html">Farmers</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="wt.html" id="logout-btn" class="signup-btn">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+        <!-- Farmer Profile Hero Section -->
+        <section class="farmer-hero">
+            <div class="farmer-hero-content">
+                <h1 class="animate-text">Grow Smarter <br> Grow Greener</h1>
+                <p class="animate-text delay-1">Connect directly with farmers for the freshest produce and agricultural needs</p>
+                <div class="animate-text delay-2">
+                    <a href="product.html" class="hero-btn">Shop Now</a>
+                    <a href="login.html" class="hero-btn">Join as Farmer</a>
+                </div>
+            </div>
+        </section>
+
+        <!-- Features Section -->
+        <section class="features" id="services">
+            <div class="section-title">
+                <h2>Our Services</h2>
+                <p>Everything you need for successful farming</p>
+            </div>
+            <div class="features-container">
+                <div class="feature-card" data-aos="fade-up">
+                    <div class="feature-icon">
+                        <i class="fas fa-seedling"></i>
+                    </div>
+                    <h3>Soil Testing</h3>
+                    <p>Professional analysis of your soil to determine optimal crop selection and fertilizer needs.</p>
+                    <a href="#" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="100">
+                    <div class="feature-icon">
+                        <i class="fas fa-cloud-sun-rain"></i>
+                    </div>
+                    <h3>Weather Forecast</h3>
+                    <p>Accurate weather predictions to help plan your farming activities effectively.</p>
+                    <a href="#" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="200">
+                    <div class="feature-icon">
+                        <i class="fas fa-leaf"></i>
+                    </div>
+                    <h3>Crop Recommend</h3>
+                    <p>Data-driven suggestions for the best crops based on your soil, climate, and market demands.</p>
+                    <a href="#" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+                <div class="feature-card" data-aos="fade-up" data-aos-delay="300">
+                    <div class="feature-icon">
+                        <i class="fas fa-flask"></i>
+                    </div>
+                    <h3>Fertilizer Guide</h3>
+                    <p>Expert recommendations on fertilizers to maximize yield while maintaining soil health.</p>
+                    <a href="#" class="feature-link">Learn More <i class="fas fa-arrow-right"></i></a>
+                </div>
+            </div>
+        </section>
+
+        <!-- How It Works Section -->
+        <section class="how-it-works">
+            <div class="section-title">
+                <h2>How It Works</h2>
+                <p>Simple steps to connect farmers and consumers</p>
+            </div>
+            <div class="steps-container">
+                <div class="step" data-aos="fade-right">
+                    <div class="step-number">01</div>
+                    <div class="step-content">
+                        <h3>Register</h3>
+                        <p>Create an account as a farmer or customer to get started with our platform.</p>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-right" data-aos-delay="100">
+                    <div class="step-number">02</div>
+                    <div class="step-content">
+                        <h3>List or Browse</h3>
+                        <p>Farmers can list their products, while customers can browse the available offerings.</p>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-right" data-aos-delay="200">
+                    <div class="step-number">03</div>
+                    <div class="step-content">
+                        <h3>Connect</h3>
+                        <p>Customers connect directly with farmers, eliminating middlemen and ensuring fair prices.</p>
+                    </div>
+                </div>
+                <div class="step" data-aos="fade-right" data-aos-delay="300">
+                    <div class="step-number">04</div>
+                    <div class="step-content">
+                        <h3>Pick Up</h3>
+                        <p>Fresh produce is Picked Up straightly from farmers , ensuring quality , fair prices and freshness.</p>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Products Section -->
+        <section class="products" id="products">
+            <div class="section-title">
+                <h2>Featured Products</h2>
+                <p>Fresh and organic produce directly from farmers</p>
+            </div>
+            <div class="product-filter">
+                <button class="filter-btn active" data-filter="all">All</button>
+                <button class="filter-btn" data-filter="vegetables">Vegetables</button>
+                <button class="filter-btn" data-filter="fruits">Fruits</button>
+                <button class="filter-btn" data-filter="grains">Grains</button>
+                <button class="filter-btn" data-filter="dairy">Dairy</button>
+            </div>
+            <div class="products-container">
+                <div class="product-card" data-category="vegetables" data-aos="zoom-in">
+                    <div class="product-image">
+                        <img src="img/tomato.jpeg" alt="Organic Tomatoes">
+                        <div class="product-tag">Organic</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Organic Tomatoes</h3>
+                        <div class="product-meta">
+                            <span class="product-farmer">By Sunshine Farms</span>
+                            <span class="product-rating"><i class="fas fa-star"></i> 4.8</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">₹120/kg</span>
+                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="product-card" data-category="fruits" data-aos="zoom-in" data-aos-delay="100">
+                    <div class="product-image">
+                        <img src="img/apples.jpeg" alt="Fresh Apples">
+                        <div class="product-tag">Seasonal</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Fresh Apples</h3>
+                        <div class="product-meta">
+                            <span class="product-farmer">By Hill Orchards</span>
+                            <span class="product-rating"><i class="fas fa-star"></i> 4.7</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">₹180/kg</span>
+                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="grains" data-aos="zoom-in" data-aos-delay="200">
+                    <div class="product-image">
+                        <img src="img/rice.jpeg" alt="Organic Rice">
+                        <div class="product-tag">Pesticide-free</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Organic Rice</h3>
+                        <div class="product-meta">
+                            <span class="product-farmer">By Green Fields</span>
+                            <span class="product-rating"><i class="fas fa-star"></i> 4.9</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">₹95/kg</span>
+                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+                <div class="product-card" data-category="dairy" data-aos="zoom-in" data-aos-delay="300">
+                    <div class="product-image">
+                        <img src="img/milk.jpeg" alt="Farm Fresh Milk">
+                        <div class="product-tag">A2 Milk</div>
+                    </div>
+                    <div class="product-info">
+                        <h3>Farm Fresh Milk</h3>
+                        <div class="product-meta">
+                            <span class="product-farmer">By Happy Cows Dairy</span>
+                            <span class="product-rating"><i class="fas fa-star"></i> 4.6</span>
+                        </div>
+                        <div class="product-price">
+                            <span class="price">₹60/liter</span>
+                            <button class="add-to-cart"><i class="fas fa-shopping-cart"></i></button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <div class="view-all-container">
+                <a href="product.html" class="view-all-btn">View All Products <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </section>
+
+<!-- Farmers Section -->
+<section class="farmers" id="farmers">
+    <div class="section-title">
+        <h2>Our Farmers</h2>
+        <p>Meet the people behind your food</p>
+    </div>
+    <div class="farmers-container">
+        <div class="farmer-card" data-aos="fade-up">
+            <div class="farmer-image">
+                <img src="/img/farmer2.avif" alt="Farmer Gurbachan">
+            </div>
+            <div class="farmer-info">
+                <h3>Gurbachan Singh</h3>
+                <p class="farmer-location"><i class="fas fa-map-marker-alt"></i> Punjab</p>
+                <p class="farmer-specialty">Pioneering water conservation in wheat and rice farming</p>
+                <div class="farmer-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star-half-alt"></i>
+                    <span>(4.7)</span>
+                </div>
+                <!-- <a href="#" class="farmer-profile-btn">View Profile</a> -->
+            </div>
+        </div>
+        <div class="farmer-card" data-aos="fade-up" data-aos-delay="100">
+            <div class="farmer-image">
+                <img src="/img/farmer11.jpeg" alt="Farmer Lalitha">
+            </div>
+            <div class="farmer-info">
+                <h3>Lalitha Devi</h3>
+                <p class="farmer-location"><i class="fas fa-map-marker-alt"></i> Andhra Pradesh</p>
+                <p class="farmer-specialty">Organic chili cultivation with traditional techniques</p>
+                <div class="farmer-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <span>(5.0)</span>
+                </div>
+                <!-- <a href="#" class="farmer-profile-btn">View Profile</a> -->
+            </div>
+        </div>
+        <div class="farmer-card" data-aos="fade-up" data-aos-delay="200">
+            <div class="farmer-image">
+                <img src="img/farmer3.jpg" alt="Farmer Ramesh">
+            </div>
+            <div class="farmer-info">
+                <h3>Ramesh Patel</h3>
+                <p class="farmer-location"><i class="fas fa-map-marker-alt"></i> Gujarat</p>
+                <p class="farmer-specialty">Sustainable cotton farming with drip irrigation</p>
+                <div class="farmer-rating">
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="fas fa-star"></i>
+                    <i class="far fa-star"></i>
+                    <span>(4.2)</span>
+                </div>
+                <!-- <a href="#" class="farmer-profile-btn">View Profile</a> -->
+            </div>
+        </div>
+    </div>
+    <div class="view-all-container">
+        <a href="about.html#Meet Our Farmers" class="view-all-btn">Meet All Farmers <i class="fas fa-arrow-right"></i></a>
+    </div>
+</section>
+
+        <!-- Weather & Crop Recommendation Section -->
+        <section class="weather-crop">
+            <div class="section-title">
+                <h2>Smart Farming Tools</h2>
+                <p>Make data-driven decisions for better yields</p>
+            </div>
+            <div class="tools-container">
+                <div class="weather-widget" data-aos="fade-right">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-cloud-sun-rain"></i> Weather Forecast</h3>
+                    </div>
+                    <div class="weather-content">
+                        <div class="current-weather">
+                            <div class="weather-icon">
+                                <i class="fas fa-sun"></i>
+                            </div>
+                            <div class="weather-info">
+                                <div class="temperature">32°C</div>
+                                <div class="weather-description">Sunny</div>
+                                <div class="location">Delhi, India</div>
+                            </div>
+                        </div>
+                        <div class="forecast">
+                            <div class="forecast-day">
+                                <div class="day">Mon</div>
+                                <div class="icon"><i class="fas fa-sun"></i></div>
+                                <div class="temp">34°C</div>
+                            </div>
+                            <div class="forecast-day">
+                                <div class="day">Tue</div>
+                                <div class="icon"><i class="fas fa-cloud-sun"></i></div>
+                                <div class="temp">32°C</div>
+                            </div>
+                            <div class="forecast-day">
+                                <div class="day">Wed</div>
+                                <div class="icon"><i class="fas fa-cloud"></i></div>
+                                <div class="temp">30°C</div>
+                            </div>
+                            <div class="forecast-day">
+                                <div class="day">Thu</div>
+                                <div class="icon"><i class="fas fa-cloud-rain"></i></div>
+                                <div class="temp">28°C</div>
+                            </div>
+                            <div class="forecast-day">
+                                <div class="day">Fri</div>
+                                <div class="icon"><i class="fas fa-cloud-sun"></i></div>
+                                <div class="temp">31°C</div>
+                            </div>
+                        </div>
+                        <a href="#" class="widget-btn">Detailed Forecast</a>
+                    </div>
+                </div>
+                <div class="crop-widget" data-aos="fade-left">
+                    <div class="widget-header">
+                        <h3><i class="fas fa-seedling"></i> Crop Recommendation</h3>
+                    </div>
+                    <div class="crop-content">
+                        <div class="soil-input">
+                            <label for="soil-type">Soil Type:</label>
+                            <select id="soil-type">
+                                <option value="" selected disabled>Select Soil Type</option>
+                                <option value="clay">Clay Soil</option>
+                                <option value="sandy">Sandy Soil</option>
+                                <option value="loamy">Loamy Soil</option>
+                                <option value="silt">Silty Soil</option>
+                                <option value="black">Black Soil</option>
+                            </select>
+                        </div>
+                        <div class="season-input">
+                            <label for="season">Season:</label>
+                            <select id="season">
+                                <option value="" selected disabled>Select Season</option>
+                                <option value="summer">Summer</option>
+                                <option value="winter">Winter</option>
+                                <option value="monsoon">Monsoon</option>
+                            </select>
+                        </div>
+                        <div class="ph-input">
+                            <label for="ph-level">pH Level:</label>
+                            <input type="range" id="ph-level" min="0" max="14" step="0.1" value="7">
+                            <div class="ph-value">7.0</div>
+                        </div>
+                        <button class="recommend-btn">Get Recommendations</button>
+                        <div class="recommended-crops">
+                            <h4>Top Recommendations</h4>
+                            <ul>
+                                <li>Rice</li>
+                                <li>Wheat</li>
+                                <li>Maize</li>
+                            </ul>
+                            <a href="#" class="widget-btn">Detailed Analysis</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </section>
+
+        <!-- Testimonials Section -->
+        <section class="testimonials">
+            <div class="section-title">
+                <h2>What Our Users Say</h2>
+                <p>Stories from customers and farmers</p>
+            </div>
+            <div class="testimonial-slider" data-aos="fade-up">
+                <div class="testimonial-container">
+                    <div class="testimonial active">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>AgriConnect has transformed my farming business. I now have direct access to customers who appreciate my organic produce, and the soil testing service has helped me improve my crop yield significantly.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="img/boy.jpeg" alt="Testimonial Author">
+                            <div class="author-info">
+                                <h4>Ramesh Singh</h4>
+                                <p>Organic Farmer, Haryana</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>As a consumer, I love knowing exactly where my food comes from. The quality of produce is exceptional, and the prices are fair since there are no middlemen. The crop recommendation feature also helped me start my own kitchen garden!</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="img/girl.jpeg" alt="Testimonial Author">
+                            <div class="author-info">
+                                <h4>Priya Sharma</h4>
+                                <p>Customer, Bangalore</p>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="testimonial">
+                        <div class="testimonial-content">
+                            <div class="quote-icon">
+                                <i class="fas fa-quote-left"></i>
+                            </div>
+                            <p>The weather forecasting and soil analysis services have been game-changers for our dairy farm. We've optimized our grazing patterns and improved milk production by 30% in just six months.</p>
+                        </div>
+                        <div class="testimonial-author">
+                            <img src="img/boy.jpeg" alt="Testimonial Author">
+                            <div class="author-info">
+                                <h4>Anand Patel</h4>
+                                <p>Dairy Farmer, Gujarat</p>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                <div class="testimonial-controls">
+                    <button class="prev-btn"><i class="fas fa-chevron-left"></i></button>
+                    <div class="testimonial-dots">
+                        <span class="dot active"></span>
+                        <span class="dot"></span>
+                        <span class="dot"></span>
+                    </div>
+                    <button class="next-btn"><i class="fas fa-chevron-right"></i></button>
+                </div>
+            </div>
+        </section>
+
+        <!-- Contact Section -->
+        <section class="contact" id="contact">
+            <div class="section-title">
+                <h2>Contact Us</h2>
+                <p>We're here to help you with any questions</p>
+            </div>
+            <div class="contact-container">
+                <div class="contact-info" data-aos="fade-right">
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-map-marker-alt"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Our Location</h3>
+                            <p>123 Farm Road, Agricultural Hub, New Delhi, India</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-phone"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Phone Number</h3>
+                            <p>+91 98765 43210</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-envelope"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Email Address</h3>
+                            <p>info@agriconnect.com</p>
+                        </div>
+                    </div>
+                    <div class="contact-item">
+                        <div class="contact-icon">
+                            <i class="fas fa-clock"></i>
+                        </div>
+                        <div class="contact-details">
+                            <h3>Working Hours</h3>
+                            <p>Monday - Saturday: 9:00 AM - 6:00 PM</p>
+                        </div>
+                    </div>
+                </div>
+                <div class="contact-form-container" data-aos="fade-left">
+                    <form class="contact-form">
+                        <div class="form-group">
+                            <label for="name">Your Name</label>
+                            <input type="text" id="name" placeholder="Enter your name" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="email">Email Address</label>
+                            <input type="email" id="email" placeholder="Enter your email" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="subject">Subject</label>
+                            <input type="text" id="subject" placeholder="Enter subject" required>
+                        </div>
+                        <div class="form-group">
+                            <label for="message">Message</label>
+                            <textarea id="message" placeholder="Enter your message" required></textarea>
+                        </div>
+                        <button type="submit" class="submit-btn">Send Message</button>
+                    </form>
+                </div>
+            </div>
+        </section>
+
+        <!-- Footer -->
+        <footer class="footer">
+            <div class="footer-container">
+                <div class="footer-top">
+                    <div class="footer-about">
+                        <h3>AgriConnect</h3>
+                        <p>Connecting farmers directly with consumers for a sustainable agricultural ecosystem. We're committed to supporting local farming and providing fresh produce to everyone.</p>
+                        <div class="social-links">
+                            <a href="#"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#"><i class="fab fa-twitter"></i></a>
+                            <a href="#"><i class="fab fa-instagram"></i></a>
+                            <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                    <div class="footer-links">
+                        <h3>Quick Links</h3>
+                        <ul>
+                            <li><a href="#">Home</a></li>
+                            <li><a href="#services">Services</a></li>
+                            <li><a href="#products">Products</a></li>
+                            <li><a href="#farmers">Farmers</a></li>
+                            <li><a href="#about">About Us</a></li>
+                            <li><a href="#contact">Contact</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-services">
+                        <h3>Our Services</h3>
+                        <ul>
+                            <li><a href="#">Soil Testing</a></li>
+                            <li><a href="#">Weather Forecast</a></li>
+                            <li><a href="#">Crop Recommendations</a></li>
+                            <li><a href="#">Fertilizer Guide</a></li>
+                            <li><a href="#">Direct Farmer Connect</a></li>
+                            <li><a href="#">Organic Certification</a></li>
+                        </ul>
+                    </div>
+                    <div class="footer-contact">
+                        <h3>Contact Info</h3>
+                        <ul>
+                            <li><i class="fas fa-map-marker-alt"></i> 123 Farm Road, Agricultural Hub, New Delhi, India</li>
+                            <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                            <li><i class="fas fa-envelope"></i> info@agriconnect.com</li>
+                            <li><i class="fas fa-clock"></i> Monday - Saturday: 9:00 AM - 6:00 PM</li>
+                        </ul>
+                    </div>
+                </div>
+                <div class="footer-bottom">
+                    <div class="copyright">
+                        <p>&copy; 2025 AgriConnect. All Rights Reserved. Designed with <i class="fas fa-heart"></i> for Farmers</p>
+                    </div>
+                    <div class="footer-bottom-links">
+                        <a href="#">Privacy Policy</a>
+                        <a href="#">Terms & Conditions</a>
+                        <a href="#">FAQ</a>
+                    </div>
+                </div>
+            </div>
+            <button class="scroll-top">
+                <i class="fas fa-arrow-up"></i>
+            </button>
+        </footer>
+
+        <script src="script.js"></script>
+    </body>
+    </html>

@@ -1,0 +1,428 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Farmer Profile - AgriConnect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="farmer-profile.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="wt.html">
+                    <i class="fas fa-leaf"></i> AgriGrow
+                </a>
+                        </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="wt.html">Home</a></li>
+                <li><a href="wt.html#services">Services</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="#" class="active">Farmers</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="wt.html" id="logout-btn" class="signup-btn">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Farmer Profile Hero Section -->
+    <section class="farmer-hero">
+        <div class="farmer-hero-content">
+            <h1 class="animate-text">Farmer Dashboard</h1>
+            <p class="animate-text delay-1">Manage your profile and products to connect with customers</p>
+            <div class="animate-text delay-2">
+                <a href="#profile-section" class="hero-btn">Manage Profile</a>
+                <a href="#products-section" class="hero-btn">Add Products</a>
+            </div>
+        </div>
+    </section>
+<!-- Farmer Profile Section -->
+<section id="profile-section" class="farmer-profile">
+    <div class="profile-header-banner">
+        <div class="container">
+            <h1><i class="fas fa-leaf"></i> Farmer Profile</h1>
+            <p>Showcase your farm and connect with customers</p>
+        </div>
+    </div>
+    
+    <div class="container">
+        <div class="profile-grid">
+            <!-- Left sidebar with profile photo and key info -->
+            <div class="profile-sidebar">
+                <div class="profile-photo-container">
+                    <div class="profile-photo">
+                        <img id="farmer-profile-image" src="img/placeholder-profile.jpg" alt="Farmer Profile">
+                        <div class="photo-overlay">
+                            <label for="profile-image-input" class="edit-photo-btn">
+                                <i class="fas fa-camera"></i>
+                            </label>
+                            <input type="file" id="profile-image-input" accept="image/*" hidden>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="farmer-quick-info">
+                    <h2 id="farmer-display-name">Loading...</h2>
+                    <p class="location-display">
+                        <i class="fas fa-map-marker-alt"></i> 
+                        <span id="farmer-location">Your Location</span>
+                    </p>
+                    <div class="farmer-stats">
+                        <div class="stat">
+                            <span class="stat-value" id="registration-date">-</span>
+                            <span class="stat-label">Joined</span>
+                        </div>
+                        <div class="stat">
+                            <span class="stat-value" id="product-count">0</span>
+                            <span class="stat-label">Products</span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <!-- Main content area with tabbed interface -->
+            <div class="profile-content">
+                <div class="profile-tabs">
+                    <button class="tab-btn active" data-tab="about">About</button>
+                    <button class="tab-btn" data-tab="specialties">Specialties</button>
+                    <button class="tab-btn" data-tab="contact">Contact Info</button>
+                </div>
+                
+                <!-- About Tab -->
+                <div class="tab-content active" id="about-tab">
+                    <div class="content-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-user"></i> About You</h3>
+                            <p class="subtitle">Tell customers about yourself and your farming practices</p>
+                        </div>
+                        <div class="edit-container">
+                            <textarea id="farmer-bio" placeholder="Tell customers about your farm, your story, and what makes your products special..."></textarea>
+                            <div class="action-row">
+                                <button class="save-btn" id="save-bio">
+                                    <i class="fas fa-save"></i> Save Changes
+                                </button>
+                            </div>
+                        </div>
+                        
+                        <div class="card-header mt-4">
+                            <h3><i class="fas fa-info-circle"></i> Basic Information</h3>
+                        </div>
+                        <div class="basic-info-grid">
+                            <div class="form-group">
+                                <label for="farmer-name">Full Name</label>
+                                <input type="text" id="farmer-name" placeholder="Your Name">
+                            </div>
+                            <div class="form-group">
+                                <label for="farmer-age">Age</label>
+                                <input type="number" id="farmer-age" placeholder="Your Age">
+                            </div>
+                            <div class="form-group">
+                                <label for="farming-experience">Years of Experience</label>
+                                <input type="number" id="farming-experience" placeholder="Years of farming experience">
+                            </div>
+                            <div class="form-group">
+                                <label for="farm-size">Farm Size (Acres)</label>
+                                <input type="text" id="farm-size" placeholder="Size of your farm">
+                            </div>
+                        </div>
+                        <div class="action-row">
+                            <button class="save-btn" id="save-basic-info">
+                                <i class="fas fa-save"></i> Save Information
+                            </button>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Specialties Tab -->
+                <div class="tab-content" id="specialties-tab">
+                    <div class="content-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-award"></i> Your Farming Specialties</h3>
+                            <p class="subtitle">What types of crops or products do you specialize in?</p>
+                        </div>
+                        
+                        <div class="specialty-container">
+                            <div class="specialty-input-group">
+                                <input type="text" id="specialty-input" placeholder="Add a specialty (e.g., Organic Rice, Pesticide-free Vegetables)">
+                                <button id="add-specialty-btn">
+                                    <i class="fas fa-plus"></i> Add
+                                </button>
+                            </div>
+                            
+                            <div class="specialty-tags-container">
+                                <div id="specialty-tags" class="specialty-tags">
+                                    <!-- Tags will be added dynamically -->
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+                
+                <!-- Contact Info Tab -->
+                <div class="tab-content" id="contact-tab">
+                    <div class="content-card">
+                        <div class="card-header">
+                            <h3><i class="fas fa-address-card"></i> Contact Information</h3>
+                            <p class="subtitle">How customers can reach you</p>
+                        </div>
+                        
+                        <div class="contact-form">
+                            <div class="form-group">
+                                <label for="farmer-email">
+                                    <i class="fas fa-envelope"></i> Email Address
+                                </label>
+                                <input type="email" id="farmer-email" placeholder="your@email.com">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="farmer-phone">
+                                    <i class="fas fa-phone"></i> Phone Number
+                                </label>
+                                <input type="tel" id="farmer-phone" placeholder="+91 1234567890">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="location-input">
+                                    <i class="fas fa-map-marker-alt"></i> Location
+                                </label>
+                                <input type="text" id="location-input" placeholder="Your village, district, state">
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="whatsapp-number">
+                                    <i class="fab fa-whatsapp"></i> WhatsApp (Optional)
+                                </label>
+                                <input type="tel" id="whatsapp-number" placeholder="WhatsApp number if different">
+                            </div>
+                            
+                            <div class="action-row">
+                                <button class="save-btn" id="save-contact">
+                                    <i class="fas fa-save"></i> Save Contact Info
+                                </button>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <!-- Notification component -->
+    <div id="notification" class="notification">
+        <div id="notification-message"></div>
+        <button id="close-notification"><i class="fas fa-times"></i></button>
+    </div>
+</section>
+    
+    <!-- Product Upload Section -->
+    <section id="products-section" class="product-upload">
+        <div class="section-title">
+            <h2>Upload Your Products</h2>
+            <p>Share your farm-fresh produce with customers</p>
+        </div>
+        
+        <div class="upload-container">
+            <div class="upload-form-container">
+                <form id="product-form" class="upload-form">
+                    <div class="form-header">
+                        <h3><i class="fas fa-leaf"></i> New Product</h3>
+                    </div>
+                    <div class="form-body">
+                        <div class="upload-preview">
+                            <div class="preview-container">
+                                <img id="product-preview" src="img/placeholder-product.jpg" alt="Product Preview">
+                                <div class="preview-overlay">
+                                    <label for="product-image-upload">
+                                        <i class="fas fa-camera"></i>
+                                        <span>Upload Image</span>
+                                    </label>
+                                    <input type="file" id="product-image-upload" accept="image/*" hidden>
+                                </div>
+                            </div>
+                        </div>
+                        
+                        <div class="form-fields">
+                            <div class="form-group">
+                                <label for="product-name">Product Name</label>
+                                <input type="text" id="product-name" placeholder="e.g., Organic Tomatoes" required>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="product-category">Category</label>
+                                <select id="product-category" required>
+                                    <option value="" selected disabled>Select Category</option>
+                                    <option value="vegetables">Vegetables</option>
+                                    <option value="fruits">Fruits</option>
+                                    <option value="grains">Grains</option>
+                                    <option value="dairy">Dairy</option>
+                                    <option value="spices">Spices</option>
+                                    <option value="other">Other</option>
+                                </select>
+                            </div>
+                            
+                            <div class="form-row">
+                                <div class="form-group">
+                                    <label for="product-price">Price (₹/kg)</label>
+                                    <input type="number" id="product-price" placeholder="e.g., 120" min="1" required>
+                                </div>
+                                
+                                <div class="form-group">
+                                    <label for="product-quantity">Available Quantity (kg)</label>
+                                    <input type="number" id="product-quantity" placeholder="e.g., 100" min="1" required>
+                                </div>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label for="product-description">Description</label>
+                                <textarea id="product-description" placeholder="Describe your product, its quality, farming methods, etc." required></textarea>
+                            </div>
+                            
+                            <div class="form-group">
+                                <label>Product Tags</label>
+                                <div class="tag-container">
+                                    <div class="tag-options">
+                                        <span class="tag-option" data-tag="Organic">Organic</span>
+                                        <span class="tag-option" data-tag="Pesticide-free">Pesticide-free</span>
+                                        <span class="tag-option" data-tag="Seasonal">Seasonal</span>
+                                        <span class="tag-option" data-tag="Farm Fresh">Farm Fresh</span>
+                                        <span class="tag-option" data-tag="Eco-friendly">Eco-friendly</span>
+                                        <span class="tag-option" data-tag="Traditional">Traditional</span>
+                                    </div>
+                                    <div class="selected-tags" id="selected-tags">
+                                        <!-- Selected tags will appear here -->
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="form-footer">
+                        <button type="button" id="clear-form" class="clear-btn"><i class="fas fa-times"></i> Clear</button>
+                        <button type="submit" class="submit-product-btn"><i class="fas fa-upload"></i> Upload Product</button>
+                    </div>
+                </form>
+            </div>
+            
+            <div class="products-list-container">
+                <div class="products-list-header">
+                    <h3><i class="fas fa-list"></i> Your Products</h3>
+                    <div class="list-controls">
+                        <select id="filter-products">
+                            <option value="all">All Categories</option>
+                            <option value="vegetables">Vegetables</option>
+                            <option value="fruits">Fruits</option>
+                            <option value="grains">Grains</option>
+                            <option value="dairy">Dairy</option>
+                            <option value="spices">Spices</option>
+                            <option value="other">Other</option>
+                        </select>
+                        <button id="refresh-list"><i class="fas fa-sync-alt"></i></button>
+                    </div>
+                </div>
+                
+                <div class="products-list" id="products-list">
+                    <!-- Products will be dynamically added here -->
+                    <div class="empty-list">
+                        <i class="fas fa-leaf"></i>
+                        <p>You haven't added any products yet.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Success Notification -->
+    <div class="notification" id="notification">
+        <div class="notification-content">
+            <i class="fas fa-check-circle"></i>
+            <p id="notification-message">Changes saved successfully!</p>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <h3>AgriConnect</h3>
+                    <p>Connecting farmers directly with consumers for a sustainable agricultural ecosystem. We're committed to supporting local farming and providing fresh produce to everyone.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="wt.html">Home</a></li>
+                        <li><a href="wt.html#services">Services</a></li>
+                        <li><a href="wt.html#products">Products</a></li>
+                        <li><a href="#">Farmers</a></li>
+                        <li><a href="wt.html#about">About Us</a></li>
+                        <li><a href="wt.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Soil Testing</a></li>
+                        <li><a href="#">Weather Forecast</a></li>
+                        <li><a href="#">Crop Recommendations</a></li>
+                        <li><a href="#">Fertilizer Guide</a></li>
+                        <li><a href="#">Direct Farmer Connect</a></li>
+                        <li><a href="#">Organic Certification</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Farm Road, Agricultural Hub, New Delhi, India</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> info@agriconnect.com</li>
+                        <li><i class="fas fa-clock"></i> Monday - Saturday: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 AgriConnect. All Rights Reserved. Designed with <i class="fas fa-heart"></i> for Farmers</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+        </div>
+        <button class="scroll-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <script src="farmer-profile.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>

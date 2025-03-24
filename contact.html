@@ -1,0 +1,380 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriConnect - Contact Us</title>
+    <!-- Link to existing styles -->
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="contact-style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <!-- Add Animate.css for additional animations -->
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/animate.css/4.1.1/animate.min.css">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="wt.html">
+                    <i class="fas fa-leaf"></i> AgriGrow
+                </a>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="wt.html">Home</a></li>
+                <li><a href="index.html#services">Services</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="farmer.html">Farmers</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="#" class="active">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="wt.html" id="logout-btn" class="signup-btn">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Contact Hero Section -->
+    <section class="contact-hero">
+        <div class="contact-hero-content animate__animated animate__fadeIn">
+            <h1>Get In Touch</h1>
+            <p>We're here to answer any questions about our services and products</p>
+            <div class="hero-divider">
+                <span class="divider-icon"><i class="fas fa-leaf"></i></span>
+            </div>
+        </div>
+        <div class="animated-bg-elements">
+            <div class="bg-element element-1"></div>
+            <div class="bg-element element-2"></div>
+            <div class="bg-element element-3"></div>
+            <div class="bg-element element-4"></div>
+        </div>
+    </section>
+
+    <!-- Contact Info Cards -->
+    <section class="contact-info-cards">
+        <div class="container">
+            <div class="info-card animate__animated animate__fadeInUp">
+                <div class="info-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Visit Us</h3>
+                <p>123 Farm Road, Agricultural Hub ( AgriGrow ),Delhi, India</p>
+                <a href="https://maps.google.com" target="_blank" class="info-link">View on Map <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="info-card animate__animated animate__fadeInUp" data-delay="200">
+                <div class="info-icon">
+                    <i class="fas fa-phone"></i>
+                </div>
+                <h3>Call Us</h3>
+                <p>+91 98765 43210</p>
+                <p>+91 12345 67890</p>
+                <a href="tel:+919876543210" class="info-link">Call Now <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="info-card animate__animated animate__fadeInUp" data-delay="400">
+                <div class="info-icon">
+                    <i class="fas fa-envelope"></i>
+                </div>
+                <h3>Email Us</h3>
+                <p>info@AgriGrow.com</p>
+                <p>support@AgriGrow.com</p>
+                <a href="mailto:info@agriconnect.com" class="info-link">Send Email <i class="fas fa-arrow-right"></i></a>
+            </div>
+            <div class="info-card animate__animated animate__fadeInUp" data-delay="600">
+                <div class="info-icon">
+                    <i class="fas fa-clock"></i>
+                </div>
+                <h3>Working Hours</h3>
+                <p>Monday - Friday: 9:00 AM - 6:00 PM</p>
+                <p>Saturday: 9:00 AM - 4:00 PM</p>
+                <a href="#" class="info-link">Schedule Meeting <i class="fas fa-arrow-right"></i></a>
+            </div>
+        </div>
+    </section>
+
+    <!-- Interactive Contact Form Section -->
+    <section class="contact-form-section">
+        <div class="container">
+            <div class="section-header animate__animated animate__fadeIn">
+                <h2>Send Us A Message</h2>
+                <p>Fill out the form below and we'll get back to you as soon as possible</p>
+                <div class="divider">
+                    <span class="divider-icon"><i class="fas fa-seedling"></i></span>
+                </div>
+            </div>
+            
+            <div class="contact-grid">
+                <div class="contact-image animate__animated animate__fadeInLeft">
+                    <img src="img/farmercontact.jpg" alt="Farmer in field" class="contact-img">
+                    <div class="contact-social-links">
+                        <h3>Connect With Us</h3>
+                        <div class="social-icons">
+                            <a href="#" class="social-icon" data-tooltip="Facebook"><i class="fab fa-facebook-f"></i></a>
+                            <a href="#" class="social-icon" data-tooltip="Twitter"><i class="fab fa-twitter"></i></a>
+                            <a href="#" class="social-icon" data-tooltip="Instagram"><i class="fab fa-instagram"></i></a>
+                            <a href="#" class="social-icon" data-tooltip="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                            <a href="#" class="social-icon" data-tooltip="YouTube"><i class="fab fa-youtube"></i></a>
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="contact-form-container animate__animated animate__fadeInRight">
+                    <form id="contactForm" class="contact-form">
+                        <div class="form-group focused-input">
+                            <input type="text" id="name" required>
+                            <label for="name">Your Name</label>
+                            <span class="input-highlight"></span>
+                            <i class="fas fa-user input-icon"></i>
+                        </div>
+                        
+                        <div class="form-group focused-input">
+                            <input type="email" id="email" required>
+                            <label for="email">Email Address</label>
+                            <span class="input-highlight"></span>
+                            <i class="fas fa-envelope input-icon"></i>
+                        </div>
+                        
+                        <div class="form-group focused-input">
+                            <input type="tel" id="phone" required>
+                            <label for="phone">Phone Number</label>
+                            <span class="input-highlight"></span>
+                            <i class="fas fa-phone input-icon"></i>
+                        </div>
+                        
+                        <div class="form-group focused-input">
+                            <select id="subject" required>
+                                <option value="" disabled selected></option>
+                                <option value="General Inquiry">General Inquiry</option>
+                                <option value="Product Information">Product Information</option>
+                                <option value="Farmer Registration">Farmer Registration</option>
+                                <option value="Technical Support">Technical Support</option>
+                                <option value="Partnership">Partnership</option>
+                            </select>
+                            <label for="subject">Subject</label>
+                            <span class="input-highlight"></span>
+                            <i class="fas fa-tag input-icon"></i>
+                        </div>
+                        
+                        <div class="form-group focused-input">
+                            <textarea id="message" rows="5" required></textarea>
+                            <label for="message">Your Message</label>
+                            <span class="input-highlight"></span>
+                            <i class="fas fa-comment input-icon"></i>
+                        </div>
+                        
+                        <div class="form-group checkbox-group">
+                            <input type="checkbox" id="newsletter" checked>
+                            <label for="newsletter">Subscribe to our newsletter</label>
+                        </div>
+                        
+                        <button type="submit" class="submit-btn">
+                            <span>Send Message</span>
+                            <i class="fas fa-paper-plane"></i>
+                        </button>
+                        
+                        <div class="form-success">
+                            <div class="success-icon">
+                                <i class="fas fa-check-circle"></i>
+                            </div>
+                            <h3>Message Sent Successfully!</h3>
+                            <p>We'll get back to you as soon as possible.</p>
+                        </div>
+                    </form>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- FAQ Section -->
+    <section class="faq-section">
+        <div class="container">
+            <div class="section-header animate__animated animate__fadeIn">
+                <h2>Frequently Asked Questions</h2>
+                <p>Find answers to commonly asked questions</p>
+                <div class="divider">
+                    <span class="divider-icon"><i class="fas fa-question-circle"></i></span>
+                </div>
+            </div>
+            
+            <div class="faq-container">
+                <div class="faq-item animate__animated animate__fadeInUp">
+                    <div class="faq-question">
+                        <h3>How do I register as a farmer on AgriConnect?</h3>
+                        <div class="toggle-icon"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To register as a farmer, click on the "Join as Farmer" button on our homepage or navigate to the registration page. Fill out the required information including your contact details, farm location, and the types of produce you grow. Our team will review your application within 48 hours.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate__animated animate__fadeInUp" data-delay="200">
+                    <div class="faq-question">
+                        <h3>What services do you provide for soil testing?</h3>
+                        <div class="toggle-icon"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our soil testing services include comprehensive analysis of soil pH, nutrient content, organic matter, and texture. We provide detailed reports with crop-specific recommendations for fertilizers and amendments. You can request soil testing through your account dashboard or by contacting our support team.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate__animated animate__fadeInUp" data-delay="400">
+                    <div class="faq-question">
+                        <h3>How do I place an order for agricultural products?</h3>
+                        <div class="toggle-icon"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>To place an order, browse our product catalog, select the items you wish to purchase, and add them to your cart. Proceed to checkout, select your preferred payment method, and confirm your delivery details. You can track your order status through your account dashboard.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate__animated animate__fadeInUp" data-delay="600">
+                    <div class="faq-question">
+                        <h3>What payment methods do you accept?</h3>
+                        <div class="toggle-icon"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>We accept various payment methods including credit/debit cards, UPI, net banking, and cash on delivery for eligible orders. All online transactions are secured with industry-standard encryption to ensure your payment information remains safe.</p>
+                    </div>
+                </div>
+                
+                <div class="faq-item animate__animated animate__fadeInUp" data-delay="800">
+                    <div class="faq-question">
+                        <h3>How accurate are your weather forecasts and crop recommendations?</h3>
+                        <div class="toggle-icon"><i class="fas fa-plus"></i></div>
+                    </div>
+                    <div class="faq-answer">
+                        <p>Our weather forecasts utilize data from multiple meteorological sources and have an accuracy rate of approximately 85-90%. Our crop recommendations are based on soil data, climate conditions, and historical performance metrics. While we strive for maximum accuracy, natural variations can occur, and recommendations should be used as guidelines along with your farming experience.</p>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Map Section -->
+    <section class="map-section">
+        <div class="container">
+            <div class="section-header animate__animated animate__fadeIn">
+                <h2>Find Us On The Map</h2>
+                <p>Visit our headquarters or nearest branch</p>
+            </div>
+            
+            <div class="map-container animate__animated animate__zoomIn">
+                <!-- Replace with your actual Google Maps embed code -->
+                <iframe src="https://www.google.com/maps/embed?pb=!1m18!1m12!1m3!1d3504.228006976187!2d77.19789485059001!3d28.566375182296386!2m3!1f0!2f0!3f0!3m2!1i1024!2i768!4f13.1!3m3!1m2!1s0x390d1ddd9e735f8f%3A0x8fe3c52e0acef5e1!2sIndia%20Gate%2C%20New%20Delhi%2C%20Delhi%20110001!5e0!3m2!1sen!2sin!4v1647872612393!5m2!1sen!2sin" width="100%" height="450" style="border:0;" allowfullscreen="" loading="lazy"></iframe>
+                
+                <div class="branch-selector">
+                    <h3>Our Locations</h3>
+                    <select id="branchLocation" class="branch-select">
+                        <option value="delhi">New Delhi Headquarters</option>
+                        <option value="mumbai">Mumbai Branch</option>
+                        <option value="bangalore">Bangalore Branch</option>
+                        <option value="chennai">Chennai Branch</option>
+                        <option value="kolkata">Kolkata Branch</option>
+                    </select>
+                </div>
+            </div>
+        </div>
+    </section>
+    
+    <!-- Call To Action -->
+    <section class="cta-section">
+        <div class="container">
+            <div class="cta-content animate__animated animate__fadeIn">
+                <h2>Ready to Transform Your Farming Experience?</h2>
+                <p>Join thousands of farmers and customers who have already benefited from our services</p>
+                <div class="cta-buttons">
+                    <a href="login.html" class="cta-btn primary">Join as Farmer</a>
+                    <a href="product.html" class="cta-btn secondary">Shop Products</a>
+                </div>
+            </div>
+        </div>
+        <div class="cta-bg-elements">
+            <div class="cta-element cta-element-1"></div>
+            <div class="cta-element cta-element-2"></div>
+            <div class="cta-element cta-element-3"></div>
+        </div>
+    </section>
+
+    <!-- Footer (Same as original) -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <h3>AgriConnect</h3>
+                    <p>Connecting farmers directly with consumers for a sustainable agricultural ecosystem. We're committed to supporting local farming and providing fresh produce to everyone.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="index.html">Home</a></li>
+                        <li><a href="index.html#services">Services</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="farmer.html">Farmers</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="#">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Soil Testing</a></li>
+                        <li><a href="#">Weather Forecast</a></li>
+                        <li><a href="#">Crop Recommendations</a></li>
+                        <li><a href="#">Fertilizer Guide</a></li>
+                        <li><a href="#">Direct Farmer Connect</a></li>
+                        <li><a href="#">Organic Certification</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Farm Road, Agricultural Hub, New Delhi, India</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> info@agriconnect.com</li>
+                        <li><i class="fas fa-clock"></i> Monday - Saturday: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 AgriConnect. All Rights Reserved. Designed with <i class="fas fa-heart"></i> for Farmers</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+        </div>
+        <button class="scroll-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <!-- Load your existing scripts for nav/footer functionality -->
+    <script src="script.js"></script>
+    <!-- Add the contact page specific script -->
+    <script src="contact-script.js"></script>
+</body>
+</html>

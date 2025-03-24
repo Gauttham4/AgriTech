@@ -1,0 +1,557 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>AgriConnect - Weather & Crop Recommendations</title>
+    <link rel="stylesheet" href="services.css">
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+    <style>
+        /* Soil Testing Container Styles */
+        .soil-testing-container {
+            background-color: #f9f9f9;
+            border-radius: 12px;
+            box-shadow: 0 4px 15px rgba(0, 0, 0, 0.1);
+            margin: 20px auto 40px;
+            max-width: 1100px;
+            overflow: hidden;
+            position: relative;
+            transition: all 0.3s ease;
+        }
+
+        .soil-testing-header {
+            background: linear-gradient(to right, #4a9f38, #2c7a1a);
+            color: white;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        .soil-testing-header h3 {
+            margin: 0;
+            font-size: 1.5rem;
+            display: flex;
+            align-items: center;
+            gap: 10px;
+        }
+
+        .soil-testing-content {
+            padding: 20px;
+            max-height: 200px;
+            overflow: hidden;
+            transition: max-height 0.5s ease;
+        }
+
+        .soil-testing-content.expanded {
+            max-height: 1500px;
+        }
+
+        .soil-testing-section {
+            margin-bottom: 15px;
+        }
+
+        .soil-testing-section h4 {
+            color: #2c7a1a;
+            margin-bottom: 10px;
+        }
+
+        .expand-button {
+            background-color: #4a9f38;
+            color: white;
+            border: none;
+            border-radius: 50%;
+            width: 40px;
+            height: 40px;
+            cursor: pointer;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.3s ease;
+        }
+
+        .expand-button:hover {
+            background-color: #2c7a1a;
+            transform: scale(1.05);
+        }
+
+        .expand-button i {
+            transition: transform 0.3s ease;
+        }
+        
+        .expand-button.expanded i {
+            transform: rotate(180deg);
+        }
+
+        .soil-testing-benefits {
+            display: grid;
+            grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+            gap: 15px;
+            margin-top: 20px;
+        }
+        
+        .benefit-item {
+            background: white;
+            padding: 15px;
+            border-radius: 8px;
+            box-shadow: 0 2px 5px rgba(0,0,0,0.05);
+        }
+        
+        .benefit-item i {
+            color: #4a9f38;
+            margin-right: 10px;
+        }
+    </style>
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="wt.html">
+                    <i class="fas fa-leaf"></i> AgriGrow
+                </a>
+            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="wt.html">Home</a></li>
+                <li><a href="#" class="active">Services</a></li>
+                <li><a href="product.html">Products</a></li>
+                <li><a href="farmer.html">Farmers</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="wt.html" id="logout-btn" class="signup-btn">Logout</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <section class="weather-hero">
+        <div class="hero-content">
+            <h1 class="animate-text">Smart Farming Tools</h1>
+            <p class="animate-text delay-1">Get weather forecasts and crop recommendations tailored to your location</p>
+        </div>
+    </section>
+
+    <!-- Main Content Area -->
+    <section class="weather-crop-tools">
+        <div class="section-title">
+            <h2>Weather & Crop Recommendation</h2>
+            <p>Make data-driven decisions for better yields</p>
+        </div>
+
+        <!-- Soil Testing Container -->
+        <div class="soil-testing-container">
+            <div class="soil-testing-header">
+                <h3><i class="fas fa-flask"></i> Soil Testing</h3>
+                <button class="expand-button" id="expand-soil-button">
+                    <i class="fas fa-chevron-down"></i>
+                </button>
+            </div>
+            <div class="soil-testing-content" id="soil-testing-content">
+                <div class="soil-testing-section">
+                    <p>Soil testing is the analysis of soil samples to determine nutrient content, composition, and other characteristics. It serves as the foundation for any successful farming operation, providing essential data for informed decision-making.</p>
+                </div>
+                
+                <div class="soil-testing-section">
+                    <h4>Why Soil Testing Is Important</h4>
+                    <p>Regular soil testing helps farmers optimize crop production, reduce environmental impact, and save money. By understanding your soil's exact needs, you can:</p>
+                    <div class="soil-testing-benefits">
+                        <div class="benefit-item">
+                            <i class="fas fa-dollar-sign"></i>
+                            <strong>Reduce Costs</strong> - Apply only the necessary fertilizers, avoiding waste
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-seedling"></i>
+                            <strong>Increase Yields</strong> - Optimize nutrient levels for better crop performance
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-leaf"></i>
+                            <strong>Prevent Problems</strong> - Identify issues before they affect your crops
+                        </div>
+                        <div class="benefit-item">
+                            <i class="fas fa-globe-asia"></i>
+                            <strong>Environmental Protection</strong> - Minimize chemical runoff and pollution
+                        </div>
+                    </div>
+                </div>
+                
+                <div class="soil-testing-section">
+                    <h4>When Soil Testing Is Needed</h4>
+                    <ul>
+                        <li><strong>Before planting new crops</strong> - To determine initial fertilizer needs</li>
+                        <li><strong>Every 2-3 years</strong> - For established fields to monitor changes</li>
+                        <li><strong>When changing crop types</strong> - Different crops have different nutrient requirements</li>
+                        <li><strong>Before purchasing new land</strong> - To assess soil quality and potential</li>
+                        <li><strong>When experiencing unexplained crop issues</strong> - To identify potential soil-related problems</li>
+                        <li><strong>After major environmental events</strong> - Flooding, drought, or contamination</li>
+                    </ul>
+                </div>
+                
+                <div class="soil-testing-section">
+                    <h4>What Soil Tests Measure</h4>
+                    <ul>
+                        <li><strong>pH levels</strong> - Acidity or alkalinity affects nutrient availability</li>
+                        <li><strong>Macronutrients</strong> - Nitrogen (N), Phosphorus (P), Potassium (K)</li>
+                        <li><strong>Secondary nutrients</strong> - Calcium, Magnesium, Sulfur</li>
+                        <li><strong>Micronutrients</strong> - Zinc, Iron, Manganese, Copper, Boron</li>
+                        <li><strong>Organic matter content</strong> - Affects soil structure, water holding capacity</li>
+                        <li><strong>CEC (Cation Exchange Capacity)</strong> - Soil's ability to hold nutrients</li>
+                        <li><strong>Soil texture</strong> - Proportions of sand, silt, and clay</li>
+                    </ul>
+                </div>
+                
+                <div class="soil-testing-section">
+                    <h4>The Soil Testing Process</h4>
+                    <ol>
+                        <li><strong>Proper Sampling</strong> - Collect multiple samples from different field areas</li>
+                        <li><strong>Laboratory Analysis</strong> - Send samples to accredited testing facilities</li>
+                        <li><strong>Interpretation</strong> - Expert analysis of results</li>
+                        <li><strong>Recommendations</strong> - Specific actions based on test results</li>
+                        <li><strong>Implementation</strong> - Application of fertilizers or amendments</li>
+                        <li><strong>Follow-up</strong> - Monitoring results and retesting as needed</li>
+                    </ol>
+                </div>
+                
+                <div class="soil-testing-section">
+                    <h4>AgriConnect Soil Testing Services</h4>
+                    <p>We offer comprehensive soil testing packages tailored to your specific farming needs. Our expert agronomists provide detailed recommendations to optimize your soil health and crop productivity.</p>
+                    <p>Contact our team to schedule your soil testing service or learn more about our soil health programs.</p>
+                </div>
+            </div>
+        </div>
+
+        <!-- Location Input -->
+        <div class="location-input-container">
+            <div class="location-input">
+                <input type="text" id="location-search" placeholder="Enter your city name...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+            <button id="current-location-btn" class="current-location-btn">
+                <i class="fas fa-map-marker-alt"></i> Use Current Location
+            </button>
+        </div>
+
+        <!-- Content Cards Container -->
+        <div class="content-cards">
+            <!-- Weather Card -->
+            <div class="weather-card" id="weather-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-cloud-sun-rain"></i> Weather Forecast</h3>
+                </div>
+                <div class="weather-loader">
+                    <div class="spinning-loader"></div>
+                    <p>Enter a location to see weather data</p>
+                </div>
+                <div class="weather-content hidden">
+                    <div class="current-weather">
+                        <div class="weather-icon">
+                            <img id="weather-icon" src="" alt="Weather Icon">
+                        </div>
+                        <div class="weather-info">
+                            <div class="location-name" id="weather-location">Loading...</div>
+                            <div class="temperature"><span id="current-temp">--</span>°C</div>
+                            <div class="weather-description" id="weather-desc">--</div>
+                            <div class="weather-feels">Feels like: <span id="feels-like">--</span>°C</div>
+                        </div>
+                    </div>
+                    <div class="weather-details">
+                        <div class="detail-item">
+                            <i class="fas fa-wind"></i>
+                            <span>Wind</span>
+                            <span id="wind-speed">-- km/h</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-tint"></i>
+                            <span>Humidity</span>
+                            <span id="humidity">--%</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-compress-arrows-alt"></i>
+                            <span>Pressure</span>
+                            <span id="pressure">-- hPa</span>
+                        </div>
+                        <div class="detail-item">
+                            <i class="fas fa-eye"></i>
+                            <span>Visibility</span>
+                            <span id="visibility">-- km</span>
+                        </div>
+                    </div>
+                    <div class="forecast-title">5-Day Forecast</div>
+                    <div class="forecast" id="forecast-container">
+                        <!-- Forecast Days will be added here by JavaScript -->
+                    </div>
+                </div>
+                <div class="weather-error hidden">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>Unable to fetch weather data. Please check the location and try again.</p>
+                </div>
+            </div>
+
+            <!-- Rest of the content -->
+
+            <!-- Crop Recommendation Card -->
+            <div class="crop-card" id="crop-card">
+                <div class="card-header">
+                    <h3><i class="fas fa-seedling"></i> Crop Recommendation</h3>
+                </div>
+                <div class="crop-loader">
+                    <div class="spinning-loader"></div>
+                    <p>Weather data needed for crop recommendations</p>
+                </div>
+                <div class="crop-content hidden">
+                    <div class="crop-description">
+                        <p>Based on the current weather conditions in your location, our AI suggests these crops:</p>
+                    </div>
+                    
+                    <button id="get-recommendations-btn" class="recommend-btn">Get Crop Recommendations</button>
+
+                    <div class="recommendations-result hidden" id="recommendations-container">
+                        <h4>Recommended Crops</h4>
+                        <div class="crops-loading">
+                            <div class="spinning-loader"></div>
+                            <p>Generating recommendations...</p>
+                        </div>
+                        <div class="recommended-crops-list" id="crops-list">
+                            <!-- Crop recommendations will be added here -->
+                        </div>
+                    </div>
+                </div>
+                <div class="crop-error hidden">
+                    <i class="fas fa-exclamation-circle"></i>
+                    <p>Unable to generate crop recommendations. Please try again.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Information Section -->
+    <section class="info-section">
+        <div class="section-title">
+            <h2>How It Works</h2>
+            <p>Making data-driven farming decisions easy</p>
+        </div>
+        <div class="info-steps">
+            <div class="info-step">
+                <div class="step-icon">
+                    <i class="fas fa-map-marker-alt"></i>
+                </div>
+                <h3>Enter Location</h3>
+                <p>Input your city name or use your current location to get localized weather data</p>
+            </div>
+            <div class="info-step">
+                <div class="step-icon">
+                    <i class="fas fa-cloud-sun-rain"></i>
+                </div>
+                <h3>Weather Analysis</h3>
+                <p>We fetch accurate weather forecasts including temperature, humidity, and more</p>
+            </div>
+            <div class="info-step">
+                <div class="step-icon">
+                    <i class="fas fa-brain"></i>
+                </div>
+                <h3>AI Processing</h3>
+                <p>Our AI analyzes the weather conditions to determine suitable crops</p>
+            </div>
+            <div class="info-step">
+                <div class="step-icon">
+                    <i class="fas fa-seedling"></i>
+                </div>
+                <h3>Smart Recommendations</h3>
+                <p>Get personalized crop suggestions based on current and forecasted weather</p>
+            </div>
+        </div>
+
+        <!-- Fertilizer Guidance Container -->
+<div class="soil-testing-container">
+    <div class="soil-testing-header">
+        <h3><i class="fas fa-leaf"></i> Fertilizer Guidance</h3>
+        <button class="expand-button" id="expand-fertilizer-button">
+            <i class="fas fa-chevron-down"></i>
+        </button>
+    </div>
+    <div class="soil-testing-content" id="fertilizer-guidance-content">
+        <div class="soil-testing-section">
+            <p>Fertilizers provide essential nutrients that crops need to grow healthy and productive. Our fertilizer guidance helps farmers apply the right nutrients in the right amounts at the right time, maximizing yields while minimizing environmental impact.</p>
+        </div>
+        
+        <div class="soil-testing-section">
+            <h4>Why Fertilizer Is Important</h4>
+            <p>Proper fertilization is crucial for sustainable and productive agriculture. Well-planned fertilizer application provides these benefits:</p>
+            <div class="soil-testing-benefits">
+                <div class="benefit-item">
+                    <i class="fas fa-chart-line"></i>
+                    <strong>Increased Yield</strong> - Properly fertilized crops produce significantly higher yields
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-shield-alt"></i>
+                    <strong>Improved Crop Quality</strong> - Better nutrient content and appearance
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-bug"></i>
+                    <strong>Pest Resistance</strong> - Well-nourished plants better resist diseases and pests
+                </div>
+                <div class="benefit-item">
+                    <i class="fas fa-balance-scale"></i>
+                    <strong>Soil Balance</strong> - Replenishes nutrients removed during harvesting
+                </div>
+            </div>
+        </div>
+        
+        <div class="soil-testing-section">
+            <h4>When Fertilizer Is Needed</h4>
+            <ul>
+                <li><strong>Pre-planting</strong> - Base applications to prepare soil for new crops</li>
+                <li><strong>Early growth stages</strong> - When plants establish their root systems</li>
+                <li><strong>During critical growth periods</strong> - Such as flowering or fruit development</li>
+                <li><strong>After soil testing shows deficiencies</strong> - To correct specific nutrient imbalances</li>
+                <li><strong>Following heavy rains</strong> - When nutrients may have leached from soil</li>
+                <li><strong>When plants show deficiency symptoms</strong> - Yellowing leaves, stunted growth, etc.</li>
+            </ul>
+        </div>
+        
+        <div class="soil-testing-section">
+            <h4>Types of Fertilizers</h4>
+            <ul>
+                <li><strong>Organic Fertilizers</strong> - Compost, manure, bone meal, and other natural materials</li>
+                <li><strong>Inorganic/Chemical Fertilizers</strong> - Manufactured products with precise nutrient ratios</li>
+                <li><strong>Slow-Release Fertilizers</strong> - Nutrients made available gradually over time</li>
+                <li><strong>Liquid Fertilizers</strong> - Fast-acting solutions for immediate nutrient needs</li>
+                <li><strong>Granular Fertilizers</strong> - Dry forms that are broadcasted or banded in soil</li>
+                <li><strong>Foliar Fertilizers</strong> - Applied directly to leaves for rapid uptake</li>
+            </ul>
+        </div>
+        
+        <div class="soil-testing-section">
+            <h4>Understanding NPK Ratios</h4>
+            <p>Fertilizers are labeled with three numbers representing the percentage of Nitrogen (N), Phosphorus (P), and Potassium (K):</p>
+            <ul>
+                <li><strong>Nitrogen (N)</strong> - Promotes leafy growth and green color</li>
+                <li><strong>Phosphorus (P)</strong> - Supports root development, flowering, and fruiting</li>
+                <li><strong>Potassium (K)</strong> - Enhances overall plant health, disease resistance, and stress tolerance</li>
+            </ul>
+            <p>For example, a 10-10-10 fertilizer contains 10% each of N, P, and K, while a 15-5-5 is high in nitrogen but lower in phosphorus and potassium.</p>
+        </div>
+        
+        <div class="soil-testing-section">
+            <h4>Best Practices for Fertilizer Application</h4>
+            <ol>
+                <li><strong>Soil Test First</strong> - Know what your soil needs before applying</li>
+                <li><strong>Right Rate</strong> - Apply only the amount needed</li>
+                <li><strong>Right Time</strong> - Schedule applications when plants can best use nutrients</li>
+                <li><strong>Right Place</strong> - Apply fertilizer where roots can access it</li>
+                <li><strong>Right Source</strong> - Choose the appropriate type of fertilizer for your crops</li>
+                <li><strong>Weather Awareness</strong> - Avoid application before heavy rain to prevent runoff</li>
+                <li><strong>Calibrate Equipment</strong> - Ensure even and accurate distribution</li>
+            </ol>
+        </div>
+        
+        <div class="soil-testing-section">
+            <h4>Environmental Considerations</h4>
+            <p>Over-application of fertilizers can lead to:</p>
+            <ul>
+                <li><strong>Water Pollution</strong> - Nutrient runoff can contaminate waterways</li>
+                <li><strong>Soil Acidification</strong> - Some fertilizers can alter soil pH over time</li>
+                <li><strong>Greenhouse Gas Emissions</strong> - Nitrogen-based fertilizers can release nitrous oxide</li>
+                <li><strong>Salt Buildup</strong> - Excessive chemical fertilizer use can increase soil salinity</li>
+            </ul>
+            <p>AgriConnect promotes sustainable fertilization practices that maximize crop benefits while protecting the environment.</p>
+        </div>
+        
+        <div class="soil-testing-section">
+            <h4>AgriConnect Fertilizer Guidance Services</h4>
+            <p>Our team of expert agronomists provides personalized fertilizer recommendations based on:</p>
+            <ul>
+                <li>Your specific soil test results</li>
+                <li>Crop type and growth stage</li>
+                <li>Local climate conditions</li>
+                <li>Sustainable farming goals</li>
+                <li>Budget considerations</li>
+            </ul>
+            <p>Contact us to develop a comprehensive fertilizer management plan tailored to your farm's unique needs.</p>
+        </div>
+    </div>
+</div>
+    </section>
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <h3>AgriConnect</h3>
+                    <p>Connecting farmers directly with consumers for a sustainable agricultural ecosystem. We're committed to supporting local farming and providing fresh produce to everyone.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="wt.html">Home</a></li>
+                        <li><a href="service.html">Services</a></li>
+                        <li><a href="product.html">Products</a></li>
+                        <li><a href="farmer.html">Farmers</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="contact.html">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Soil Testing</a></li>
+                        <li><a href="#">Weather Forecast</a></li>
+                        <li><a href="#">Crop Recommendations</a></li>
+                        <li><a href="#">Fertilizer Guide</a></li>
+                        <li><a href="#">Direct Farmer Connect</a></li>
+                        <li><a href="#">Organic Certification</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Farm Road, Agricultural Hub, New Delhi, India</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> info@agriconnect.com</li>
+                        <li><i class="fas fa-clock"></i> Monday - Saturday: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 AgriConnect. All Rights Reserved. Designed with <i class="fas fa-heart"></i> for Farmers</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+        </div>
+        <button class="scroll-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+    <script src="script.js"></script>
+    <script src="services.js"></script>
+</body>
+</html>

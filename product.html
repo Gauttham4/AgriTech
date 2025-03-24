@@ -1,0 +1,396 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Products - AgriConnect</title>
+    <link rel="stylesheet" href="style.css">
+    <link rel="stylesheet" href="products.css">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@300;400;500;600;700&display=swap" rel="stylesheet">
+</head>
+<body>
+    <!-- Preloader -->
+    <div class="preloader">
+        <div class="spinner"></div>
+    </div>
+
+    <!-- Navbar -->
+    <nav class="navbar">
+        <div class="navbar-container">
+            <div class="logo">
+                <a href="wt.html">
+                    <i class="fas fa-leaf"></i> AgriGrow
+                </a>            </div>
+            <div class="menu-toggle">
+                <div class="bar"></div>
+                <div class="bar"></div>
+                <div class="bar"></div>
+            </div>
+            <ul class="nav-menu">
+                <li><a href="wt.html">Home</a></li>
+                <li><a href="wt.html#services">Services</a></li>
+                <li><a href="#" class="active">Products</a></li>
+                <li><a href="farmer.html">Farmers</a></li>
+                <li><a href="about.html">About</a></li>
+                <li><a href="contact.html">Contact</a></li>
+            </ul>
+            <div class="nav-buttons">
+                <a href="#" class="cart-icon" id="cart-icon">
+                    <i class="fas fa-shopping-cart"></i>
+                    <span class="cart-count">0</span>
+                </a>
+                <a href="login.html" class="login-btn">Login</a>
+                <a href="signup.html" class="signup-btn">Sign Up</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Products Hero Section -->
+    <section class="products-hero">
+        <div class="products-hero-content">
+            <h1 class="animate-text">Farm Fresh Products</h1>
+            <p class="animate-text delay-1">Directly from local farmers to your doorstep</p>
+            <div class="search-container animate-text delay-2">
+                <input type="text" id="product-search" placeholder="Search for vegetables, fruits, grains...">
+                <button id="search-btn"><i class="fas fa-search"></i></button>
+            </div>
+        </div>
+    </section>
+
+    <!-- Main Content -->
+    <div class="main-content">
+        <!-- Filters Sidebar -->
+        <aside class="filters-sidebar">
+            <div class="filters-header">
+                <h3>Filters</h3>
+                <button id="clear-filters">Clear All</button>
+            </div>
+            
+            <div class="filter-group">
+                <h4>Categories</h4>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" value="vegetables"> Vegetables
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="fruits"> Fruits
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="grains"> Grains
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="dairy"> Dairy
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="spices"> Spices
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="other"> Other
+                    </label>
+                </div>
+            </div>
+            
+            <div class="filter-group">
+                <h4>Price Range</h4>
+                <div class="price-range">
+                    <input type="range" id="price-slider" min="0" max="1000" step="10" value="1000">
+                    <div class="price-inputs">
+                        <div class="price-field">
+                            <span>₹</span>
+                            <input type="number" id="min-price" min="0" value="0">
+                        </div>
+                        <span>to</span>
+                        <div class="price-field">
+                            <span>₹</span>
+                            <input type="number" id="max-price" min="0" value="1000">
+                        </div>
+                    </div>
+                </div>
+            </div>
+            
+            <div class="filter-group">
+                <h4>Product Tags</h4>
+                <div class="filter-options">
+                    <label class="filter-option">
+                        <input type="checkbox" value="Organic"> Organic
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="Pesticide-free"> Pesticide-free
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="Seasonal"> Seasonal
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="Farm Fresh"> Farm Fresh
+                    </label>
+                    <label class="filter-option">
+                        <input type="checkbox" value="Eco-friendly"> Eco-friendly
+                    </label>
+                </div>
+            </div>
+            
+            <!-- <div class="filter-group">
+                <h4>Farmer Rating</h4>
+                <div class="rating-filter">
+                    <label class="filter-option">
+                        <input type="radio" name="rating" value="4"> 
+                        <span class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </span>
+                        & Up
+                    </label>
+                    <label class="filter-option">
+                        <input type="radio" name="rating" value="3">
+                        <span class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </span>
+                        & Up
+                    </label>
+                    <label class="filter-option">
+                        <input type="radio" name="rating" value="2">
+                        <span class="stars">
+                            <i class="fas fa-star"></i>
+                            <i class="fas fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                            <i class="far fa-star"></i>
+                        </span>
+                        & Up
+                    </label>
+                </div>
+            </div> -->
+        </aside>
+
+        <!-- Products Grid -->
+        <div class="products-container">
+            <div class="products-header">
+                <div class="products-count">
+                    Showing <span id="product-count">24</span> products
+                </div>
+                <div class="sorting-options">
+                    <label for="sort-select">Sort by:</label>
+                    <select id="sort-select">
+                        <option value="featured">Featured</option>
+                        <option value="price-low">Price: Low to High</option>
+                        <option value="price-high">Price: High to Low</option>
+                        <option value="rating">Avg. Customer Review</option>
+                        <option value="date">Newest Arrivals</option>
+                    </select>
+                </div>
+            </div>
+            
+            <div class="products-grid" id="products-grid">
+                <!-- Products will be dynamically added here -->
+            </div>
+            
+            <div class="pagination">
+                <button class="pagination-btn" disabled>
+                    <i class="fas fa-chevron-left"></i>
+                </button>
+                <div class="page-numbers">
+                    <span class="page-number active">1</span>
+                    <span class="page-number">2</span>
+                    <span class="page-number">3</span>
+                    <span class="page-number">...</span>
+                </div>
+                <button class="pagination-btn">
+                    <i class="fas fa-chevron-right"></i>
+                </button>
+            </div>
+        </div>
+        
+        <!-- Cart Sidebar -->
+        <aside class="cart-sidebar" id="cart-sidebar">
+            <div class="cart-header">
+                <h3><i class="fas fa-shopping-cart"></i> Your Cart</h3>
+                <button id="close-cart" class="close-cart">
+                    <i class="fas fa-times"></i>
+                </button>
+            </div>
+            
+            <div class="cart-items" id="cart-items">
+                <!-- Cart items will be added here dynamically -->
+                <div class="empty-cart">
+                    <img src="img/empty-cart.svg" alt="Empty Cart">
+                    <p>Your cart is empty</p>
+                    <a href="#products-grid" class="start-shopping-btn">Start Shopping</a>
+                </div>
+            </div>
+            
+            <div class="cart-summary">
+                <div class="summary-row">
+                    <span>Subtotal (<span id="cart-item-count">0</span> items):</span>
+                    <span class="cart-subtotal">₹0.00</span>
+                </div>
+                <div class="summary-row">
+                    <span>Shipping Fee:</span>
+                    <span class="shipping-fee">₹50.00</span>
+                </div>
+                <div class="summary-row total-row">
+                    <span>Total:</span>
+                    <span class="cart-total">₹0.00</span>
+                </div>
+                <button class="checkout-btn" disabled>
+                    Proceed to Checkout
+                </button>
+            </div>
+        </aside>
+    </div>
+
+    <!-- Product Quick View Modal -->
+    <div class="modal" id="product-modal">
+        <div class="modal-content">
+            <span class="close-modal">&times;</span>
+            <div class="product-modal-container">
+                
+                <div class="product-modal-gallery">
+                    <div class="gallery-main">
+                        <img id="modal-main-image" src="" alt="Product Image">
+                    </div>
+                 
+                </div>
+                
+                <div class="product-modal-details">
+                    <h2 id="modal-product-name"></h2>
+                    
+                    <div class="product-farmer-info">
+                        <div class="farmer-badge">
+                            <img id="modal-farmer-image" src="" alt="Farmer">
+                            <div class="farmer-info">
+                                <p>Sold by <a id="modal-farmer-name" href="#"></a></p>
+                                <div class="farmer-rating">
+                                    <span class="stars">
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star"></i>
+                                        <i class="fas fa-star-half-alt"></i>
+                                    </span>
+                                    <span id="modal-farmer-rating">4.5</span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    
+                    <div class="product-price-container">
+                        <span class="current-price">₹<span id="modal-product-price"></span>/kg</span>
+                        <span class="original-price">₹<span id="modal-original-price"></span></span>
+                        <span class="discount-badge"><span id="modal-discount">20</span>% OFF</span>
+                    </div>
+                    
+                    <div class="product-availability">
+                        <span class="stock-status in-stock">
+                            <i class="fas fa-check-circle"></i> In Stock
+                        </span>
+                        <span>Available Quantity: <span id="modal-quantity"></span> kg</span>
+                    </div>
+                    
+                    <div class="product-tags" id="modal-product-tags">
+                        <!-- Tags will be added dynamically -->
+                    </div>
+                    
+                    <div class="product-description">
+                        <h4>About this product</h4>
+                        <p id="modal-product-description"></p>
+                    </div>
+                    
+                    <div class="product-actions">
+                        <div class="quantity-selector">
+                            <button class="quantity-btn minus">-</button>
+                            <input type="number" id="modal-quantity-input" value="1" min="1" max="100">
+                            <button class="quantity-btn plus">+</button>
+                            <span>kg</span>
+                        </div>
+                        
+                        <div class="action-buttons">
+                            <button class="add-to-cart-btn" id="modal-add-to-cart">
+                                <i class="fas fa-cart-plus"></i> Add to Cart
+                            </button>
+                            <button class="buy-now-btn">
+                                <i class="fas fa-bolt"></i> Buy Now
+                            </button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Footer -->
+    <footer class="footer">
+        <div class="footer-container">
+            <div class="footer-top">
+                <div class="footer-about">
+                    <h3>AgriConnect</h3>
+                    <p>Connecting farmers directly with consumers for a sustainable agricultural ecosystem. We're committed to supporting local farming and providing fresh produce to everyone.</p>
+                    <div class="social-links">
+                        <a href="#"><i class="fab fa-facebook-f"></i></a>
+                        <a href="#"><i class="fab fa-twitter"></i></a>
+                        <a href="#"><i class="fab fa-instagram"></i></a>
+                        <a href="#"><i class="fab fa-linkedin-in"></i></a>
+                        <a href="#"><i class="fab fa-youtube"></i></a>
+                    </div>
+                </div>
+                <div class="footer-links">
+                    <h3>Quick Links</h3>
+                    <ul>
+                        <li><a href="wt.html">Home</a></li>
+                        <li><a href="wt.html#services">Services</a></li>
+                        <li><a href="#">Products</a></li>
+                        <li><a href="farmer-profile.html">Farmers</a></li>
+                        <li><a href="about.html">About Us</a></li>
+                        <li><a href="wt.html#contact">Contact</a></li>
+                    </ul>
+                </div>
+                <div class="footer-services">
+                    <h3>Our Services</h3>
+                    <ul>
+                        <li><a href="#">Soil Testing</a></li>
+                        <li><a href="#">Weather Forecast</a></li>
+                        <li><a href="#">Crop Recommendations</a></li>
+                        <li><a href="#">Fertilizer Guide</a></li>
+                        <li><a href="#">Direct Farmer Connect</a></li>
+                        <li><a href="#">Organic Certification</a></li>
+                    </ul>
+                </div>
+                <div class="footer-contact">
+                    <h3>Contact Info</h3>
+                    <ul>
+                        <li><i class="fas fa-map-marker-alt"></i> 123 Farm Road, Agricultural Hub, New Delhi, India</li>
+                        <li><i class="fas fa-phone"></i> +91 98765 43210</li>
+                        <li><i class="fas fa-envelope"></i> info@agriconnect.com</li>
+                        <li><i class="fas fa-clock"></i> Monday - Saturday: 9:00 AM - 6:00 PM</li>
+                    </ul>
+                </div>
+            </div>
+            <div class="footer-bottom">
+                <div class="copyright">
+                    <p>&copy; 2025 AgriConnect. All Rights Reserved. Designed with <i class="fas fa-heart"></i> for Farmers</p>
+                </div>
+                <div class="footer-bottom-links">
+                    <a href="#">Privacy Policy</a>
+                    <a href="#">Terms & Conditions</a>
+                    <a href="#">FAQ</a>
+                </div>
+            </div>
+        </div>
+        <button class="scroll-top">
+            <i class="fas fa-arrow-up"></i>
+        </button>
+    </footer>
+
+    <script src="products.js"></script>
+    <script src="script.js"></script>
+</body>
+</html>
